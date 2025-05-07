@@ -5,4 +5,5 @@ return [
     App\Providers\AppServiceProvider::class,
     App\Providers\AuditServiceProvider::class,
     App\Providers\NotificationServiceProvider::class,
+    App\Providers\RateLimiterServiceProvider::class,
 ];

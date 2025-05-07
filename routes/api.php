@@ -10,7 +10,7 @@ Route::get('/user', function (Request $request) {
     return $request->user();
 })->middleware('auth:sanctum');
 
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware(['auth:sanctum', 'rate.limit'])->group(function () {
 
     Route::post('/notify', [NotificationController::class, 'send'])->name('api.notify');
     
